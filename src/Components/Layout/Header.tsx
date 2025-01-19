@@ -5,7 +5,7 @@ import { IconContext } from "react-icons"
 import { RxHamburgerMenu } from "react-icons/rx"
 import { NavLink } from 'react-router-dom'
 import { DFT_Logo } from "../../assets"
-import Account from "../Account"
+import Account from "../Account/Account"
 
 const liCSS = "p-2 flex items-center justify-center"
 
@@ -18,10 +18,6 @@ const Header = () => {
             <nav className="px-5">
                 <section className="tablet:flex tablet:items-center">
                     <div className="flex mobile:justify-center items-center">
-                        <NavLink to="/" className={'w-auto'}>
-                            <img src={DFT_Logo} className="h-[120px] p-4 pr-5" alt="" />
-                            {/* <h1>Logo</h1> */}
-                        </NavLink>
                         <button className="tablet:hidden" onClick={() => setShowLinks(!showLinks)}>
                             <IconContext.Provider value={{ color: "white", size: "25px" }}>
                                 <div>
@@ -29,19 +25,26 @@ const Header = () => {
                                 </div>
                             </IconContext.Provider>
                         </button>
+                        <NavLink to="/" className={'w-auto'}>
+                            <img src={DFT_Logo} className="h-[120px] p-4 pr-5" alt="" />
+                            {/* <h1>Logo</h1> */}
+                        </NavLink>
+                        <div className='md:order-2 flex flex-1 content-center justify-end mr-1  tablet:hidden'>
+                            <Account />
+                        </div>
                     </div>
 
 
-                    <div id="links" className={`${showLinks ? `mobile:h-[120px]` : "mobile:h-0"} tablet:h-100 transform duration-500 ease-in-out transition-[height] origin-top overflow-hidden`}>
+                    <div id="links" className={`${showLinks ? `mobile:h-[160px]` : "mobile:h-0"} tablet:h-100 transform duration-500 ease-in-out transition-[height] origin-top overflow-hidden`}>
                         <ul className="tablet:flex tablet:space-x-4">
                             <li className={liCSS}><NavLink to="/home">Home</NavLink></li>
                             <li className={liCSS}><NavLink to="/aboutus">About</NavLink></li>
                             <li className={liCSS}><NavLink to="/contact">Contact</NavLink></li>
-                            <li className={liCSS}><NavLink to="/events">Contact</NavLink></li>
+                            <li className={liCSS}><NavLink to="/events">Events</NavLink></li>
                         </ul>
                     </div>
-
-                    <div className='md:order-2 flex flex-1 content-center justify-end mr-1'>
+                        
+                    <div className='md:order-2 flex flex-1 content-center justify-end mr-1 mobile:hidden'>
                         <Account />
                     </div>
                 </section>

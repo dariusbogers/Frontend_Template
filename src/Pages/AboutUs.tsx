@@ -1,8 +1,8 @@
 const AboutUs = () => {
     return (
-        <>
-        <h1>AboutUs</h1>
-        </>
+        <div className="min-h-full bg-amber-200 desktop:mx-96">
+
+        </div>
     )
 }
 

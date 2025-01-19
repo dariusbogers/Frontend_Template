@@ -1,13 +1,13 @@
 import { IconContext } from "react-icons"
 import { BsPersonFill } from "react-icons/bs"
-import Dropdown from "./Dropdown/Dropdown"
-import ListButtonItem from "./List/ListButtonItem"
-import ListButtonDelimiter from "./List/ListButtonDelimiter"
+import Dropdown from "../Dropdown/Dropdown"
+import ListButtonItem from "../List/ListButtonItem"
+import ListButtonDelimiter from "../List/ListButtonDelimiter"
 import { Link } from "react-router-dom"
 
 const Account = () => {
 
-    var loggedIn:boolean = true
+    var loggedIn:boolean = false
 
     var userDefined:boolean = loggedIn
     var userKeysIsNotZero:boolean = loggedIn

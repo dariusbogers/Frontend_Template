@@ -4,6 +4,8 @@ import Home from './Pages/Home'
 import AboutUs from './Pages/AboutUs'
 import Contact from './Pages/Contact'
 import Events from './Pages/Events'
+import LoginPage from './Pages/Account/LoginPage'
+import RegisterPage from './Pages/Account/RegisterPage'
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
           <Route path='/aboutus' element={<AboutUs/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/events' element={<Events/>}/>
+          <Route path='/LoginPage' element={<LoginPage />} />
+          <Route path='/RegisterPage' element={<RegisterPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
