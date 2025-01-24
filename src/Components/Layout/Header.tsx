@@ -1,4 +1,4 @@
-import { useState } from "react"
+import {useState } from "react"
 // import { AS_Logo } from "../../assets"
 // import { DFT_Logo } from "../../assets"
 import { IconContext } from "react-icons"
@@ -10,8 +10,28 @@ import Account from "../Account/Account"
 const liCSS = "p-2 flex items-center justify-center"
 
 const Header = () => {
+    // const dropdownRef = useRef(null)
 
     const [showLinks, setShowLinks] = useState(false)
+
+
+    // const handleClose = () => {
+    //     setShowLinks(false)
+    // }
+
+    // useEffect(() => {
+    //     const handleOutsideClick = (event) => {
+    //         if(!dropdownRef.current?.contains(event.target)) {
+    //             handleClose()
+    //         }
+    //     }
+
+    //     window.addEventListener("mousedown", handleOutsideClick)
+
+    // return () => {
+    //   window.removeEventListener("mousedown", handleOutsideClick)
+    // }
+    // }, [dropdownRef])
 
     return (
         <header className="sticky w-full top-0 bg-black">

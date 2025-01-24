@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 
 const Account = () => {
 
-    var loggedIn:boolean = false
+    var loggedIn:boolean = true
 
     var userDefined:boolean = loggedIn
     var userKeysIsNotZero:boolean = loggedIn

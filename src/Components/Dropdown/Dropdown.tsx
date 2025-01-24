@@ -1,6 +1,15 @@
 import { useRef, useEffect, useState } from "react"
 
-const Dropdown = ({ children, button, dropdownClass, bgClass, btnClass }) => {
+// TODO add interface
+interface DropdownProps {
+    children: React.ReactNode;       // Content inside the dropdown
+    button: React.ReactNode;         // Button content to toggle the dropdown
+    dropdownClass?: string;          // Additional classes for the dropdown container
+    bgClass?: string;                // Classes for the background container
+    btnClass?: string;               // Classes for the button
+  }
+
+const Dropdown: React.FC<DropdownProps> = ({ children, button, dropdownClass, bgClass, btnClass }) => {
     const dropdownRef = useRef(null)
     const [open, setOpen] = useState(false)
     const handleOpen = () => {
@@ -12,7 +21,7 @@ const Dropdown = ({ children, button, dropdownClass, bgClass, btnClass }) => {
     }
 
     useEffect(() => {
-        const handleOutsideClick = (event) => {
+        const handleOutsideClick = (event: { target: any; }) => {
             if(!dropdownRef.current?.contains(event.target)) {
                 handleClose()
             }
